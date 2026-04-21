@@ -18,7 +18,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def __init__(self, overlay, initial_preset):
         super().__init__()
-        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        self.setWindowFlags(QtCore.Qt.Window | QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.resize(920, 610)
 

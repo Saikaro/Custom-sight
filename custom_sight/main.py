@@ -46,10 +46,10 @@ def main():
     # — работает и в dev-режиме, и в замороженном .exe
     _pkg_dir  = os.path.dirname(os.path.abspath(__file__))
     ico_path  = os.path.join(_pkg_dir, "target.ico")
-    tray = QtWidgets.QSystemTrayIcon(QtGui.QIcon(ico_path) if os.path.exists(ico_path)
-                                     else win.windowIcon(), app)
-    if os.path.exists(ico_path):
-        tray.setIcon(QtGui.QIcon(ico_path))
+    app_icon  = QtGui.QIcon(ico_path) if os.path.exists(ico_path) else QtGui.QIcon()
+    app.setWindowIcon(app_icon)
+    win.setWindowIcon(app_icon)
+    tray = QtWidgets.QSystemTrayIcon(app_icon, app)
 
     menu = QtWidgets.QMenu()
     menu.addAction(
