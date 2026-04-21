@@ -1,0 +1,24 @@
+run.py
+CustomSight.spec
+requirements.txt
+requirements-build.txt
+build.bat
+build_portable.bat
+build_onedir.bat
+.gitignore
+.github/
+  workflows/
+    build.yml
+custom_sight/
+  __init__.py
+  constants.py
+  system.py
+  config.py
+  stylesheet.py
+  widgets.py
+  overlay.py
+  settings_window.py
+  main_window.py
+  rmb_listener.py
+  main.py
+  target.ico
