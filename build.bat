@@ -13,13 +13,16 @@ if errorlevel 1 (
     exit /b 1
 )
 
-:: ── Проверить / установить PyInstaller ───────────────────────────────────────
-python -c "import PyInstaller" >nul 2>&1
-if errorlevel 1 (
-    echo [!] PyInstaller не найден. Устанавливаю...
-    pip install pyinstaller
-    echo.
-)
+:: ── Установить зависимости ────────────────────────────────────────────────────
+echo [*] Обновление pip...
+python -m pip install --upgrade pip --quiet
+
+echo [*] Установка зависимостей приложения...
+pip install -r requirements.txt --quiet
+
+echo [*] Установка PyInstaller...
+pip install -r requirements-build.txt --quiet
+echo.
 
 :: ── Очистить предыдущий билд ─────────────────────────────────────────────────
 if exist build  rmdir /s /q build

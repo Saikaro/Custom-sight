@@ -38,15 +38,14 @@ python run.py
 
 ## Сборка исполняемого файла
 
-В корне репозитория находятся три скрипта сборки:
+В корне репозитория находится скрипт сборки `build.bat`.  
+Дважды кликни на него — все зависимости установятся автоматически, после чего появится готовая папка и ярлык на рабочем столе:
 
-| Скрипт | Описание |
-|---|---|
-| `build.bat` | Сборка в **папку** (`dist\CustomSight\CustomSight.exe`) + ярлык на рабочем столе |
-| `build_onedir.bat` | То же самое, альтернативный вариант |
-| `build_portable.bat` | Сборка в **один portable `.exe`** (`dist\CustomSight-portable.exe`) — можно перенести куда угодно |
+```
+dist\CustomSight\CustomSight.exe
+```
 
-Просто дважды кликни на нужный `.bat` файл. Все зависимости установятся автоматически.
+> Готовые сборки (`.exe` и `.zip`) доступны в разделе [Releases](https://github.com/Saikaro/Custom-sight/releases).
 
 ---
 
@@ -58,9 +57,7 @@ Custom-sight/
 ├── requirements.txt        # Зависимости приложения
 ├── requirements-build.txt  # Зависимости для сборки (PyInstaller)
 ├── CustomSight.spec        # Spec-файл PyInstaller
-├── build.bat               # Скрипт сборки (папка)
-├── build_onedir.bat        # Скрипт сборки (папка, альт.)
-├── build_portable.bat      # Скрипт сборки (один exe)
+├── build.bat               # Скрипт сборки (папка + ярлык)
 └── custom_sight/           # Основной пакет
     ├── __init__.py
     ├── main.py             # Запуск приложения и горячие клавиши
@@ -131,15 +128,14 @@ python run.py
 
 ## Building an executable
 
-Three build scripts are provided in the root of the repository:
+A `build.bat` script is provided in the root of the repository.  
+Simply double-click it — all dependencies will be installed automatically, then a ready-to-use folder and a Desktop shortcut will be created:
 
-| Script | Description |
-|---|---|
-| `build.bat` | Builds a **folder** distribution (`dist\CustomSight\CustomSight.exe`) and places a shortcut on the Desktop |
-| `build_onedir.bat` | Same as above, alternative variant |
-| `build_portable.bat` | Builds a **single portable `.exe`** (`dist\CustomSight-portable.exe`) — can be moved anywhere and run without installation |
+```
+dist\CustomSight\CustomSight.exe
+```
 
-Simply double-click the desired `.bat` file. It will automatically install all dependencies and run PyInstaller.
+> Pre-built releases (`.exe` and `.zip`) are available in the [Releases](https://github.com/Saikaro/Custom-sight/releases) section.
 
 ---
 
@@ -151,9 +147,7 @@ Custom-sight/
 ├── requirements.txt        # Runtime dependencies
 ├── requirements-build.txt  # Build dependencies (PyInstaller)
 ├── CustomSight.spec        # PyInstaller spec file
-├── build.bat               # Build script (folder)
-├── build_onedir.bat        # Build script (folder, alt)
-├── build_portable.bat      # Build script (single exe)
+├── build.bat               # Build script (folder + Desktop shortcut)
 └── custom_sight/           # Main package
     ├── __init__.py
     ├── main.py             # Application entry & hotkeys
