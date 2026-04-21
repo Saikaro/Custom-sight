@@ -10,7 +10,7 @@
 - Прозрачный прицел-оверлей (работает поверх любого окна)
 - Настройка формы, размера, цвета, прозрачности, зазора и толщины
 - Система пресетов — сохраняй и переключайся между профилями прицела
-- Авто-растяжение окна игры для удаления чёрных полос
+- Возможность менять разрешение (Меняет разрешение в свойствах Windows. После закрытия окна с игрой разрешение сбрасывается автоматически до изначального.)
 - Переключение разрешения экрана по горячей клавише
 - Слушатель правой кнопки мыши (скрывает прицел при прицеливании)
 - Иконка в системном трее с быстрыми действиями
@@ -100,7 +100,7 @@ Draws a fully configurable crosshair on top of any game window without injecting
 - Transparent overlay crosshair (works over any window)
 - Customizable shape, size, color, opacity, gap, thickness
 - Preset system — save and switch between multiple crosshair profiles
-- Auto-stretch game window to remove black borders
+- Ability to change resolution (Changes resolution in Windows display settings. After closing the game window, resolution resets automatically to the original.)
 - Custom resolution switching with a hotkey
 - Right-mouse-button listener (hides crosshair while ADS)
 - System tray icon with quick actions
