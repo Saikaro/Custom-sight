@@ -26,5 +26,4 @@ Thumbs.db
 Desktop.ini
 
 # Local build scripts (not for distribution)
-build_onedir.bat
-build_portable.bat
+*.bat

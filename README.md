@@ -36,16 +36,14 @@ python run.py
 
 ---
 
-## Сборка исполняемого файла
+## Скачать
 
-В корне репозитория находится скрипт сборки `build.bat`.  
-Дважды кликни на него — все зависимости установятся автоматически, после чего появится готовая папка и ярлык на рабочем столе:
+Готовые сборки доступны в разделе [Releases](https://github.com/Saikaro/Custom-sight/releases):
 
-```
-dist\CustomSight\CustomSight.exe
-```
-
-> Готовые сборки (`.exe` и `.zip`) доступны в разделе [Releases](https://github.com/Saikaro/Custom-sight/releases).
+| Файл | Описание |
+|---|---|
+| `CustomSight-portable.exe` | Один файл — скачай и запусти |
+| `CustomSight-vX.X.zip` | Распакуй и запусти `CustomSight.exe`. Работает быстрее. |
 
 ---
 
@@ -57,7 +55,6 @@ Custom-sight/
 ├── requirements.txt        # Зависимости приложения
 ├── requirements-build.txt  # Зависимости для сборки (PyInstaller)
 ├── CustomSight.spec        # Spec-файл PyInstaller
-├── build.bat               # Скрипт сборки (папка + ярлык)
 └── custom_sight/           # Основной пакет
     ├── __init__.py
     ├── main.py             # Запуск приложения и горячие клавиши
@@ -126,16 +123,14 @@ python run.py
 
 ---
 
-## Building an executable
+## Download
 
-A `build.bat` script is provided in the root of the repository.  
-Simply double-click it — all dependencies will be installed automatically, then a ready-to-use folder and a Desktop shortcut will be created:
+Pre-built releases are available in the [Releases](https://github.com/Saikaro/Custom-sight/releases) section:
 
-```
-dist\CustomSight\CustomSight.exe
-```
-
-> Pre-built releases (`.exe` and `.zip`) are available in the [Releases](https://github.com/Saikaro/Custom-sight/releases) section.
+| File | Description |
+|---|---|
+| `CustomSight-portable.exe` | Single file — download and run |
+| `CustomSight-vX.X.zip` | Extract and run `CustomSight.exe`. Starts faster. |
 
 ---
 
@@ -147,7 +142,6 @@ Custom-sight/
 ├── requirements.txt        # Runtime dependencies
 ├── requirements-build.txt  # Build dependencies (PyInstaller)
 ├── CustomSight.spec        # PyInstaller spec file
-├── build.bat               # Build script (folder + Desktop shortcut)
 └── custom_sight/           # Main package
     ├── __init__.py
     ├── main.py             # Application entry & hotkeys
