@@ -1,5 +1,98 @@
 # Custom Sight
 
+Оверлей-прицел для **STALCRAFT / STALCRAFT: X**.  
+Рисует полностью настраиваемый прицел поверх игрового окна без инъекций в игровой процесс.
+
+---
+
+## Возможности
+
+- Прозрачный прицел-оверлей (работает поверх любого окна)
+- Настройка формы, размера, цвета, прозрачности, зазора и толщины
+- Система пресетов — сохраняй и переключайся между профилями прицела
+- Авто-растяжение окна игры для удаления чёрных полос
+- Переключение разрешения экрана по горячей клавише
+- Слушатель правой кнопки мыши (скрывает прицел при прицеливании)
+- Иконка в системном трее с быстрыми действиями
+- Глобальная горячая клавиша `Ctrl+Shift+H` для показа/скрытия прицела
+
+---
+
+## Требования
+
+- Windows 10 / 11
+- Python 3.10+
+
+---
+
+## Установка (из исходников)
+
+```bash
+git clone https://github.com/Saikaro/Custom-sight.git
+cd Custom-sight
+pip install -r requirements.txt
+python run.py
+```
+
+---
+
+## Сборка исполняемого файла
+
+В корне репозитория находятся три скрипта сборки:
+
+| Скрипт | Описание |
+|---|---|
+| `build.bat` | Сборка в **папку** (`dist\CustomSight\CustomSight.exe`) + ярлык на рабочем столе |
+| `build_onedir.bat` | То же самое, альтернативный вариант |
+| `build_portable.bat` | Сборка в **один portable `.exe`** (`dist\CustomSight-portable.exe`) — можно перенести куда угодно |
+
+Просто дважды кликни на нужный `.bat` файл. Все зависимости установятся автоматически.
+
+---
+
+## Структура проекта
+
+```
+Custom-sight/
+├── run.py                  # Точка входа
+├── requirements.txt        # Зависимости приложения
+├── requirements-build.txt  # Зависимости для сборки (PyInstaller)
+├── CustomSight.spec        # Spec-файл PyInstaller
+├── build.bat               # Скрипт сборки (папка)
+├── build_onedir.bat        # Скрипт сборки (папка, альт.)
+├── build_portable.bat      # Скрипт сборки (один exe)
+└── custom_sight/           # Основной пакет
+    ├── __init__.py
+    ├── main.py             # Запуск приложения и горячие клавиши
+    ├── main_window.py      # Главное окно настроек
+    ├── overlay.py          # Виджет оверлея прицела
+    ├── settings_window.py  # Панель настроек
+    ├── widgets.py          # Переиспользуемые UI-виджеты
+    ├── config.py           # Управление конфигом и пресетами
+    ├── constants.py        # Константы приложения и цветовая палитра
+    ├── stylesheet.py       # QSS-стили
+    ├── system.py           # Вспомогательные функции WinAPI
+    ├── rmb_listener.py     # Слушатель правой кнопки мыши
+    └── target.ico          # Иконка приложения
+```
+
+---
+
+## Зависимости
+
+| Пакет | Назначение |
+|---|---|
+| `PyQt5` | GUI-фреймворк |
+| `pywin32` | Доступ к Windows API |
+| `keyboard` | Регистрация глобальных горячих клавиш |
+| `pynput` | Слушатель кнопок мыши |
+
+---
+
+---
+
+# Custom Sight — English
+
 A custom crosshair overlay application for **STALCRAFT / STALCRAFT: X**.  
 Draws a fully configurable crosshair on top of any game window without injecting into the game process.
 
